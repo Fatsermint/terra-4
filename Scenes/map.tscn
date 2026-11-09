@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ewhirpnihbn2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_58wgy"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ci6au"]
+sky_material = SubResource("ProceduralSkyMaterial_58wgy")
+
+[sub_resource type="Environment" id="Environment_26yhd"]
+background_mode = 2
+sky = SubResource("Sky_ci6au")
+glow_enabled = true
+
+[node name="Map" type="Node3D" unique_id=948496651]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=660112958]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=429238592]
+environment = SubResource("Environment_26yhd")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=403105869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=417074156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0658569, 0.73670197, -1.0274625)
+size = Vector3(3.1317139, 2.3706055, 1)
