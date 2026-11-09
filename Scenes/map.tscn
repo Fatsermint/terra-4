@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://d3x0oftblr828" path="res://Assets/Levels/1/glass_2.blend" id="1_26yhd"]
 [ext_resource type="PackedScene" uid="uid://dpbipeyr2vhv2" path="res://Assets/Levels/1/table.blend" id="2_p3ir5"]
 [ext_resource type="Material" uid="uid://dsrsohb8usicp" path="res://Assets/Levels/1/couch.tres" id="3_p3ir5"]
+[ext_resource type="PackedScene" uid="uid://by700hsjmdn8c" path="res://Assets/Levels/1/kitchen.blend" id="4_q0mm3"]
+[ext_resource type="PackedScene" uid="uid://ciorfwit3pmup" path="res://Assets/Levels/1/kitchen_2.blend" id="5_np2xp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_58wgy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -135,7 +137,7 @@ operation = 2
 size = Vector3(1, 2.8, 1.4)
 
 [node name="glass_3" parent="." unique_id=1312755115 instance=ExtResource("1_26yhd")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.90000004, 1.4, 2.4)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -4, 1.8, 3.8000002)
 
 [node name="table2" parent="." unique_id=1845439300 instance=ExtResource("2_p3ir5")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.5000001, 0.79999995, 3.3999999)
@@ -149,3 +151,9 @@ mesh = SubResource("ArrayMesh_myvm1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" unique_id=1776286553]
 shape = SubResource("ConcavePolygonShape3D_p3ir5")
+
+[node name="kitchen" parent="." unique_id=1368366824 instance=ExtResource("4_q0mm3")]
+transform = Transform3D(0.64, 0, 0, 0, 0.64, 0, 0, 0, 0.64, -4.1, 1.0399995, 2.9)
+
+[node name="kitchen_2" parent="." unique_id=1881909543 instance=ExtResource("5_np2xp")]
+transform = Transform3D(1.06, 0, 0, 0, 1.06, 0, 0, 0, 1.06, -4.3, 3.3, 3.0000002)
