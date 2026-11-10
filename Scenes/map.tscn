@@ -2028,10 +2028,10 @@ shape = SubResource("ConcavePolygonShape3D_wcnou")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CSGCombiner3D/House/Furniture/frontDoor" unique_id=1833422132]
 libraries/ = SubResource("AnimationLibrary_natfk")
 
-[node name="couch" type="Node3D" parent="CSGCombiner3D/House/Furniture" unique_id=2012703962 groups=["IntrestingObj"]]
+[node name="couch" type="Node3D" parent="CSGCombiner3D/House/Furniture" unique_id=2012703962]
 metadata/Name = "Couch"
 
-[node name="Cube" type="MeshInstance3D" parent="CSGCombiner3D/House/Furniture/couch" unique_id=439065786]
+[node name="Cube" type="MeshInstance3D" parent="CSGCombiner3D/House/Furniture/couch" unique_id=439065786 groups=["IntrestingObj"]]
 transform = Transform3D(-0.1, 0, 8.742278e-09, 0, 0.1, 0, -8.742278e-09, 0, -0.1, 4, 1.1999996, 2.7000003)
 material_override = ExtResource("3_p3ir5")
 mesh = SubResource("ArrayMesh_myvm1")
@@ -2129,7 +2129,7 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.25447983, 0)
 mesh = SubResource("ArrayMesh_ajvq6")
 
 [node name="lightSwitch" type="Node3D" parent="CSGCombiner3D/House/Furniture/light3" unique_id=2124870685 groups=["IntrestingObj"]]
-transform = Transform3D(8.742276e-09, 0, -0.09999999, 0, 0.099999994, 0, 0.09999999, 0, 8.742276e-09, 1.7999996, -1.7, -0.28999972)
+transform = Transform3D(7.549789e-09, 0, -0.09999999, 0, 0.099999994, 0, 0.09999999, 0, 7.549789e-09, 1.7999996, -1.7, -0.28999972)
 script = ExtResource("5_w7jjh")
 metadata/Name = "Light Switch"
 metadata/Light = ""
