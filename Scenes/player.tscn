@@ -60,5 +60,5 @@ offset_right = 56.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Glass Of water"
+horizontal_alignment = 1
 script = ExtResource("2_cvnsp")
