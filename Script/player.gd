@@ -2,10 +2,11 @@ extends CharacterBody3D
 
 
 var SPEED = 3
-const JUMP_VELOCITY = 2.5
+const JUMP_VELOCITY = 3.5
 const SENSITIVITY = 0.0025
 @onready var camera: Camera3D = $head/Camera3D
 @onready var head: Node3D = $head
+
 
 
 func _ready() -> void:
@@ -44,5 +45,5 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED *0.3)
 			velocity.z = move_toward(velocity.z, 0, SPEED *0.3)
 		
-
+	
 	move_and_slide()

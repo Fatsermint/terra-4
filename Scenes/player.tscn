@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://yg4puxho81q7"]
 
 [ext_resource type="Script" uid="uid://c1iq5s8vu3wj3" path="res://Script/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://c83lve5x5srlq" path="res://Scenes/playerScreenItemUI.gd" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g1hc3"]
 radius = 0.16552734
@@ -15,3 +16,49 @@ shape = SubResource("CapsuleShape3D_g1hc3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -0.001)
 
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=1665676247]
+
+[node name="RayCast3D" type="RayCast3D" parent="head/Camera3D" unique_id=237543499]
+visible = false
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
+debug_shape_custom_color = Color(0.9471994, 0.9471994, 0.9471994, 1)
+
+[node name="Control" type="Control" parent="head/Camera3D" unique_id=1315500080]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Object" type="Control" parent="head/Camera3D/Control" unique_id=1249385025]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="head/Camera3D/Control/Object" unique_id=1315561053]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -11.5
+offset_right = 56.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Glass Of water"
+script = ExtResource("2_cvnsp")
