@@ -5,7 +5,7 @@ var finishing = false
 @onready var player: CharacterBody3D = $"../Player"
 var nextBananaLoc = 0
 var nextBananaLocMinus = 0
-var finishLoc = randi_range(20, 25)
+var finishLoc = randi_range(20, 80)
 @onready var BananaText: Label = $"../Player/Control/Label"
 @onready var BananaUI: Control = $"../Player/Control"
 
