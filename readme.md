@@ -10,3 +10,9 @@ I will keep doing this in the next week.
 E   Do
 WASD    Move
 Mouse   Move head
+## See this project with your own eyes
+If you want to see this project just go to https://fatsermint.github.io/terra-4/ 
+## Models
+All models are made by so they aren't the best. I used Blender to make them
+## Cool features
+I think the fact that you can flip lights on and off is pretty cool feature
