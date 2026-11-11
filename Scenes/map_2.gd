@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		await showText("How are you already finished..!?")
 		await showText("uurghh..")
 		await showText("I guess I can teleport you back")
-		await showText("Just a second you ltile bean")
+		await showText("Just a second you litle bean")
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 		
 		

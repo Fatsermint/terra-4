@@ -12,6 +12,7 @@ var SENSITIVITY = 0.0025
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	self.global_position = Vector3(0,2,0)
 func _unhandled_input(event: InputEvent) -> void:
 	if self.get_meta("SelfControl"):
 		if event is InputEventMouseMotion:
@@ -19,6 +20,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotate_x(-event.relative.y * SENSITIVITY)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(60))
 func _physics_process(delta: float) -> void:
+	
 	SPEED = self.get_meta("Speed")
 	JUMP_VELOCITY = self.get_meta("JumpVelocity")
 	SENSITIVITY = self.get_meta("Sensitivity")
@@ -65,3 +67,10 @@ func banana_slip():
 	eye_colorRect.visible = true
 	await get_tree().create_timer(1.5).timeout
 	get_tree().change_scene_to_file("uid://dx20012i7mklj")
+func wake_up():
+	print("A")
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(self, "position", Vector3(-4.232, 1.694, -3.212), 1)
+	tween.tween_property(self, "rotation", Vector3(-90, 0, -0), 1)
+	
