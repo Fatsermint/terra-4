@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dx20012i7mklj"]
 
 [ext_resource type="PackedScene" uid="uid://yg4puxho81q7" path="res://Scenes/player.tscn" id="1_y2yxb"]
+[ext_resource type="Script" uid="uid://d1ygdtj64jhyj" path="res://Scenes/map_2.gd" id="2_vijbk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cll7l"]
 resource_name = "Material.002"
@@ -91,14 +92,16 @@ data = PackedVector3Array(0.24069999, 3.2103, 3.3943, 0.2934, 3.3966, 3.2331998,
 [node name="main2" type="Node3D" unique_id=879076403]
 
 [node name="Player" parent="." unique_id=1484013096 instance=ExtResource("1_y2yxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.57835954, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2865803, 0)
+metadata/Speed = 0
+metadata/JumpVelocity = 0
 
 [node name="map" type="Node3D" parent="." unique_id=877101941]
+script = ExtResource("2_vijbk")
 
 [node name="bananas" type="Node3D" parent="map" unique_id=77865131]
 
 [node name="banana" type="Node3D" parent="map/bananas" unique_id=879065818]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="Cube" type="MeshInstance3D" parent="map/bananas/banana" unique_id=1466516773]
 mesh = SubResource("ArrayMesh_vijbk")

@@ -1,9 +1,9 @@
 extends CharacterBody3D
 
-
+var jumps = 1
 var SPEED = 3
-const JUMP_VELOCITY = 3.5
-const SENSITIVITY = 0.0025
+var JUMP_VELOCITY = 3.5
+var SENSITIVITY = 0.0025
 @onready var camera: Camera3D = $head/Camera3D
 @onready var head: Node3D = $head
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
@@ -19,6 +19,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotate_x(-event.relative.y * SENSITIVITY)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(60))
 func _physics_process(delta: float) -> void:
+	SPEED = self.get_meta("Speed")
+	JUMP_VELOCITY = self.get_meta("JumpVelocity")
+	SENSITIVITY = self.get_meta("Sensitivity")
+	
 	if self.get_meta("SelfControl"):
 		
 		# Add the gravity.
@@ -26,9 +30,12 @@ func _physics_process(delta: float) -> void:
 			velocity += get_gravity() * delta
 	
 		# Handle jump.
-		if Input.is_action_just_pressed("jump") and is_on_floor():
+		if Input.is_action_just_pressed("jump") and jumps >= 1:
 			velocity.y = JUMP_VELOCITY
-	
+			jumps -=1
+		if is_on_floor():
+			jumps = self.get_meta("Jumps")
+			
 		
 		var input_dir := Input.get_vector("left", "right", "up", "down")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
