@@ -1,5 +1,6 @@
 # Game
-## The name is under construction
+## Game where you need to get the water cup BUT it isn't as easy as you think >:D
+![alt text](image.png)
 ## Goal
 Get water but there comes side quests (I only coded one)
 ## AI
@@ -18,3 +19,5 @@ All models are made by so they aren't the best. I used Blender to make them
 I think the fact that you can flip lights on and off is pretty cool feature
 ## Terra
 I made this project to terra's week 4
+## Why I made this project
+I made this project to learn Godot and learn how to make 3d games.
